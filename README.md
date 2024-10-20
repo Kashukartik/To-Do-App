@@ -3,6 +3,11 @@
 ## Overview
 The To-Do App is a simple web application that allows users to manage their tasks efficiently. Users can add, remove, check off, and reorder tasks. The app also supports persistent storage using the browser's local storage, ensuring that tasks remain available even after the page is refreshed.
 
+**To-Do App Link**: 
+```bash
+https://kashukartik.github.io/To-Do-App/
+```
+
 ## Features
 - **Add Tasks**: Quickly add new tasks to your to-do list.
 - **Remove Tasks**: Easily remove tasks with a confirmation prompt to prevent accidental deletions.
@@ -24,7 +29,7 @@ The To-Do App is a simple web application that allows users to manage their task
 ### Installation
 1. **Clone the repository** (or download the ZIP file):
     ```bash
-    git clone https://github.com/yourusername/todo-app.git
+    git clone https://github.com/Kashukartik/todo-app.git
     ```
 2. **Navigate to the project directory**:
     ```bash
