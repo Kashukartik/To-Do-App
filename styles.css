@@ -1,0 +1,215 @@
+/* styles.css */
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #e0e7ff; /* Soft light blue */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    color: #4a5568; /* Dark gray */
+}
+
+.welcome-message {
+    text-align: center;
+    color: #2d3748; /* Slightly darker gray */
+    margin: 10px 0;
+}
+
+/* Todo input section stays fixed at the top */
+.todo-input {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#todoInput {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #4a5568;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+#todoInput:focus {
+    outline: none;
+    border-color: #3182ce; /* Blue color */
+}
+
+#addTodoBtn {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #3182ce; /* Blue color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 150px;
+}
+
+#addTodoBtn:hover {
+    background-color: #2b6cb0; /* Darker blue */
+    transform: scale(1.05); /* Scale effect */
+}
+
+/* Scrollable Todo list */
+#todoList {
+    list-style-type: none;
+    padding: 0;
+    overflow-y: auto;
+    flex-grow: 1;
+    max-height: 60vh;
+    margin: 0;
+    padding-right: 10px;
+}
+
+/* List items */
+#todoList li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2s ease, background-color 0.3s ease; /* Add transition */
+}
+
+#todoList li:hover {
+    background-color: #edf2f7; /* Light hover effect */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+#todoList li:nth-child(odd) {
+    background-color: #f1f1f1;
+}
+
+/* Wrapping content and button container */
+#todoList li div {
+    flex: 1;
+    word-wrap: break-word;
+    padding-right: 10px;
+}
+
+/* Style for both buttons */
+.complete-Btn, .remove-Btn {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+/* Complete button style */
+.complete-Btn {
+    background-color: #48bb78;
+    color: white;
+}
+
+.complete-Btn:hover {
+    background-color: #38a169;
+}
+
+/* Remove button style */
+.remove-Btn {
+    background-color: #e53e3e;
+    color: white;
+}
+
+.remove-Btn:hover {
+    background-color: #c53030;
+}
+
+/* Strikethrough style when task is complete */
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+        height: auto;
+    }
+
+    #todoInput {
+        width: 65%;
+    }
+
+    #addTodoBtn {
+        width: 30%;
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 100%;
+        padding: 10px;
+        height: auto;
+    }
+
+    .todo-input {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #todoInput {
+        width: 100%;
+        padding: 8px;
+    }
+
+    #addTodoBtn {
+        width: 100%;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    #todoList li {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+.dragging {
+    opacity: 0.5;
+    background-color: lightgrey;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #4a5568;
+}
